@@ -67,6 +67,12 @@ function checkMatch(q1, q2) {
         q1.classList.add("matched");
         q2.classList.add("matched");
         resetSelections();
+        const todasCartas = document.querySelectorAll(".card");
+        const cartasCombinadas = document.querySelectorAll(".card.matched");
+        if (todasCartas.length === cartasCombinadas.length) {
+            const nomeJogador = document.getElementById("nome").value || "Jogador";
+            alert(`Parabéns, ${nomeJogador}! Você completou o jogo em ${tentativas} tentativas!`);
+        }
     } else {
         setTimeout(() => {
             q1.innerHTML = `<i class="bi bi-question-circle"></i>`;
