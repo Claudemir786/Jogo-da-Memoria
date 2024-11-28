@@ -92,6 +92,9 @@ function resetSelections() {
 preencherespacos(cartas);
 eventocartas();
 
+const reiniciar = document.getElementById("reiniciar");
+reiniciar.addEventListener("click", reiniciarjogo);
+
 function reiniciarjogo() {
     tentativas = 0;
     atualizaplacar();
@@ -110,7 +113,5 @@ function reiniciarjogo() {
     eventocartas();
 }
 
-const reiniciar = document.getElementById("reiniciar");
-reiniciar.addEventListener("click", reiniciarjogo);
 
-atualizaplacar();
+
